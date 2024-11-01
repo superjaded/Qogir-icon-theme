@@ -251,14 +251,14 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-for THEME in '' '-manjaro' '-ubuntu'; do
-  for COLOR in '' '-dark' '-light'; do
-    if [[ "${THEME}" != '' || "${COLOR}" != '' ]] && [[ -d "${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}" ]]; then
-      rm -rf "${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}"
-      echo -e "Remove old themes ${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}..."
-    fi
-  done
-done
+#for THEME in '' '-manjaro' '-ubuntu'; do
+#  for COLOR in '' '-dark' '-light'; do
+#    if [[ "${THEME}" != '' || "${COLOR}" != '' ]] && [[ -d "${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}" ]]; then
+#      rm -rf "${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}"
+#      echo -e "Remove old themes ${DEST_DIR}/${THEME_NAME}${THEME}${COLOR}..."
+#    fi
+#  done
+#done
 
 for theme in "${themes[@]-${THEME_VARIANTS[@]}}"; do
   for color in "${colors[@]-${COLOR_VARIANTS[@]}}"; do
